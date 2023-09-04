@@ -10,13 +10,13 @@ describe('PrivySign Web Testing E2E', () => {
       cy.url().should('eq', 'https://oauth.privy.id/login');
     
       // Masukkan PrivyID
-      cy.get('#__BVID__4').type('MKR5159');
+      cy.get('#__BVID__4').type(PRIVY_ID);
     
       // Klik tombol "CONTINUE" (saya mengasumsikan tombol ini memiliki teks "CONTINUE")
       cy.get('#tag-lg001:contains("CONTINUE")').click();
     
       // Masukkan password
-      cy.get('#__BVID__4').type('Gr!y4s4k!n4ho6');
+      cy.get('#__BVID__4').type(PASSWORD);
     
       // Klik tombol "CONTINUE" lagi
       cy.get('#tag-lg001:contains("CONTINUE")').click();
